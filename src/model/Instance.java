@@ -193,4 +193,19 @@ public class Instance {
 		this.chassisTemp.add(c);
 	}
 
+	@Override
+	public String toString() {
+		return "Instance[ \nfileName=" + fileName + "\nnrCarriers=" + nrCarriers
+				+ "\nnrVehicles=" + nrVehicles + "\nnrCustomers=" + nrCustomers
+				+ "\nnrUncouplingCustomers=" + nrUncouplingCustomers
+				+ "\nnrChassis=" + nrChassis + "\nnrOrders=" + nrOrders
+				+ "\nradius=" + radius + "\nwindowTime=" + windowTime
+				+ "\nserviceTimeMin=" + serviceTimeMin + "\nserviceTimeMax="
+				+ serviceTimeMax + "\ncarriers=" + carriers.toString() + "\nvehicles="
+				+ vehicles.toString() + "\ncustomers=" + customers + "\nchassis="
+				+ chassis + "\norders=" + orders + "]";
+	}
+	
+	
+
 }

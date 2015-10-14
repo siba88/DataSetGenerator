@@ -57,4 +57,13 @@ public class Chassis {
 		this.vehicle = vehicle;
 	}
 
+	@Override
+	public String toString() {
+		return "Chassis [chassis_id=" + chassis_id + ", chassis_type="
+				+ chassis_type + ", coupled=" + coupled + ", customer="
+				+ customer.getName() + ", vehicle=" + vehicle + "]";
+	}
+	
+	
+
 }

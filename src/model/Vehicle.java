@@ -66,4 +66,12 @@ public class Vehicle {
 		this.busy = busy;
 	}
 
+	@Override
+	public String toString() {
+		return "Vehicle [vehicleId=" + vehicleId + ", carrier=" + carrier.getCarrierId()
+				+ ", location=" + location + ", chassisOn=" + chassisOn
+				+ ", chassis=" + chassis + ", busy=" + busy + "]";
+	}
+	
+	
 }

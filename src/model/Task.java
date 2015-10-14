@@ -101,4 +101,17 @@ public class Task {
 		this.taskType = taskType;
 	}
 
+	@Override
+	public String toString() {
+		return "Task [taskId=" + taskId + ", customer=" + customer.getCustomer_id()
+				+ ", preconditionContainer=" + preconditionContainer
+				+ ", preconditionEmptyContainer=" + preconditionEmptyContainer
+				+ ", postconditionEmptyContainer="
+				+ postconditionEmptyContainer + ", preconditionChassis="
+				+ preconditionChassis + ", preconditionChassisType="
+				+ preconditionChassisType + ", taskType=" + taskType.toString() + "]";
+	}
+	
+	
+
 }

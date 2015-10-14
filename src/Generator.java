@@ -28,6 +28,8 @@ public class Generator {
 		OrderGenerator orderGen = new OrderGenerator(instance);
 		orderGen.loadOrders();
 		
+		System.out.println(instance);
+		
 		
 	}
 

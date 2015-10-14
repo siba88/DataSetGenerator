@@ -33,6 +33,12 @@ public class Order {
 	public void addTask(Task task){
 		this.tasks.add(task);
 	}
+
+	@Override
+	public String toString() {
+		return "\nOrder [orderId=" + orderId + ", carrier=" + carrier.getName()
+				+ ", tasks=" + tasks.toString() + "]";
+	}
 	
 	
 

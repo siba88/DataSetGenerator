@@ -19,7 +19,6 @@ public class OrderGenerator {
 		this.instance=instance;
 		rand = new Random();
 		taskCounter=0;
-		loadOrders();
 	}
 
 	public void loadOrders() {

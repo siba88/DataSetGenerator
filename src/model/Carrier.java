@@ -27,4 +27,11 @@ public class Carrier {
 		this.name = name;
 	}
 
+	@Override
+	public String toString() {
+		return "Carrier[carrierId=" + carrierId + ", name=" + name + "]";
+	}
+	
+	
+
 }
