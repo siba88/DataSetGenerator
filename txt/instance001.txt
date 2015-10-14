@@ -1,0 +1,20 @@
+Instance[ 
+fileName=instance001
+nrCarriers=2
+nrVehicles=2
+nrCustomers=3
+nrUncouplingCustomers=2
+nrChassis=2
+nrOrders=3
+radius=100
+windowTime=-1
+serviceTimeMin=10
+serviceTimeMax=30
+carriers=[Carrier[carrierId=1, name=carrier1], Carrier[carrierId=2, name=carrier2]]
+vehicles=[Vehicle [vehicleId=1, carrier=1, location=Location [x=0, y=0], chassisOn=false, chassis=null, busy=false], Vehicle [vehicleId=2, carrier=1, location=Location [x=0, y=0], chassisOn=false, chassis=null, busy=false]]
+customers=[Customer [customer_id=0, name=Depot, uncoupling=true, location=Location [x=0, y=0]], Customer [customer_id=1, name=Customer1, uncoupling=true, location=Location [x=56, y=-90]], Customer [customer_id=2, name=Customer2, uncoupling=true, location=Location [x=-43, y=6]], Customer [customer_id=3, name=Customer3, uncoupling=false, location=Location [x=-25, y=-98]]]
+chassis=[Chassis [chassis_id=1, chassis_type=1, coupled=false, customer=Customer1, vehicle=null], Chassis [chassis_id=2, chassis_type=1, coupled=false, customer=Depot, vehicle=null], Chassis [chassis_id=2, chassis_type=2, coupled=false, customer=Customer2, vehicle=null], Chassis [chassis_id=4, chassis_type=2, coupled=false, customer=Depot, vehicle=null]]
+orders=[
+Order [orderId=1, carrier=carrier1, tasks=[Task [taskId=1, customer=0, preconditionContainer=false, preconditionEmptyContainer=false, postconditionEmptyContainer=false, preconditionChassis=true, preconditionChassisType=1, taskType=PICK], Task [taskId=2, customer=3, preconditionContainer=true, preconditionEmptyContainer=false, postconditionEmptyContainer=false, preconditionChassis=true, preconditionChassisType=1, taskType=DELIVER], Task [taskId=3, customer=3, preconditionContainer=false, preconditionEmptyContainer=false, postconditionEmptyContainer=true, preconditionChassis=true, preconditionChassisType=1, taskType=PICK], Task [taskId=4, customer=0, preconditionContainer=false, preconditionEmptyContainer=false, postconditionEmptyContainer=false, preconditionChassis=true, preconditionChassisType=1, taskType=DELIVER]]], 
+Order [orderId=2, carrier=carrier1, tasks=[Task [taskId=1, customer=3, preconditionContainer=false, preconditionEmptyContainer=false, postconditionEmptyContainer=false, preconditionChassis=true, preconditionChassisType=1, taskType=PICK], Task [taskId=2, customer=1, preconditionContainer=true, preconditionEmptyContainer=false, postconditionEmptyContainer=false, preconditionChassis=true, preconditionChassisType=1, taskType=DELIVER], Task [taskId=3, customer=1, preconditionContainer=false, preconditionEmptyContainer=false, postconditionEmptyContainer=true, preconditionChassis=true, preconditionChassisType=1, taskType=PICK], Task [taskId=4, customer=0, preconditionContainer=false, preconditionEmptyContainer=false, postconditionEmptyContainer=false, preconditionChassis=true, preconditionChassisType=1, taskType=DELIVER]]], 
+Order [orderId=3, carrier=carrier1, tasks=[Task [taskId=1, customer=0, preconditionContainer=false, preconditionEmptyContainer=false, postconditionEmptyContainer=true, preconditionChassis=true, preconditionChassisType=2, taskType=PICK], Task [taskId=2, customer=2, preconditionContainer=true, preconditionEmptyContainer=false, postconditionEmptyContainer=false, preconditionChassis=true, preconditionChassisType=2, taskType=DELIVER], Task [taskId=3, customer=2, preconditionContainer=false, preconditionEmptyContainer=false, postconditionEmptyContainer=true, preconditionChassis=true, preconditionChassisType=2, taskType=PICK], Task [taskId=4, customer=0, preconditionContainer=false, preconditionEmptyContainer=false, postconditionEmptyContainer=false, preconditionChassis=true, preconditionChassisType=2, taskType=DELIVER]]]]]

@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+import fileGenerator.TextGenerator;
 import model.Instance;
 
 
@@ -30,6 +31,7 @@ public class Generator {
 		
 		System.out.println(instance);
 		
+		TextGenerator txtGen = new TextGenerator(instance);
 		
 	}
 
