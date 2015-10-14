@@ -2,6 +2,14 @@ package model;
 
 import java.util.ArrayList;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "instance")
+@XmlAccessorType (XmlAccessType.FIELD)
 public class Instance {
 
 	private String fileName;
@@ -17,10 +25,18 @@ public class Instance {
 	private int serviceTimeMin;
 	private int serviceTimeMax;
 
+	@XmlElementWrapper
+    @XmlElement(name="carrier")
 	private ArrayList<Carrier> carriers;
+	@XmlElementWrapper
+    @XmlElement(name="vehicle")
 	private ArrayList<Vehicle> vehicles;
+	@XmlElementWrapper
+    @XmlElement(name="customer")
 	private ArrayList<Customer> customers;
 	private ArrayList<Chassis> chassis;
+	@XmlElementWrapper
+    @XmlElement(name="order")
 	private ArrayList<Order> orders;
 	private ArrayList<Chassis> chassisTemp;
 

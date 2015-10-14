@@ -2,18 +2,30 @@ package model;
 
 import java.util.ArrayList;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+
+@XmlRootElement(name = "order")
+@XmlAccessorType (XmlAccessType.FIELD)
 public class Order {
-	
+
 	private int orderId;
 	private Carrier carrier;
-	
+
 	private ArrayList<Task> tasks;
-	
-	public Order(int orderId){
-		this.orderId=orderId;
-		tasks=new ArrayList<Task>();
+
+	public Order() {
+		super();
 	}
 
+	public Order(int orderId) {
+		this.orderId = orderId;
+		tasks = new ArrayList<Task>();
+	}
+
+	@XmlTransient
 	public Carrier getCarrier() {
 		return carrier;
 	}
@@ -29,8 +41,8 @@ public class Order {
 	public void setTasks(ArrayList<Task> tasks) {
 		this.tasks = tasks;
 	}
-	
-	public void addTask(Task task){
+
+	public void addTask(Task task) {
 		this.tasks.add(task);
 	}
 
@@ -39,7 +51,5 @@ public class Order {
 		return "\nOrder [orderId=" + orderId + ", carrier=" + carrier.getName()
 				+ ", tasks=" + tasks.toString() + "]";
 	}
-	
-	
 
 }

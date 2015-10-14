@@ -1,7 +1,15 @@
 package model;
 
-public class Task {
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
+@XmlRootElement(name = "task")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Task {
+	
+	@XmlTransient
 	private Order order;
 	private int taskId;
 	private Customer customer;
@@ -11,8 +19,12 @@ public class Task {
 	private boolean preconditionChassis;
 	private int preconditionChassisType;
 	private TaskType taskType;
-	
-	public Task(Order order, int taskId){
+
+	public Task() {
+		super();
+	}
+
+	public Task(Order order, int taskId) {
 		super();
 		this.order = order;
 		this.taskId = taskId;
@@ -103,15 +115,14 @@ public class Task {
 
 	@Override
 	public String toString() {
-		return "Task [taskId=" + taskId + ", customer=" + customer.getCustomer_id()
-				+ ", preconditionContainer=" + preconditionContainer
-				+ ", preconditionEmptyContainer=" + preconditionEmptyContainer
-				+ ", postconditionEmptyContainer="
+		return "Task [taskId=" + taskId + ", customer="
+				+ customer.getCustomer_id() + ", preconditionContainer="
+				+ preconditionContainer + ", preconditionEmptyContainer="
+				+ preconditionEmptyContainer + ", postconditionEmptyContainer="
 				+ postconditionEmptyContainer + ", preconditionChassis="
 				+ preconditionChassis + ", preconditionChassisType="
-				+ preconditionChassisType + ", taskType=" + taskType.toString() + "]";
+				+ preconditionChassisType + ", taskType=" + taskType.toString()
+				+ "]";
 	}
-	
-	
 
 }

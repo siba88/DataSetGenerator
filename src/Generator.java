@@ -5,6 +5,7 @@ import java.io.InputStream;
 import java.util.Properties;
 
 import fileGenerator.TextGenerator;
+import fileGenerator.XmlGenerator;
 import model.Instance;
 
 
@@ -31,8 +32,8 @@ public class Generator {
 		
 		System.out.println(instance);
 		
-		TextGenerator txtGen = new TextGenerator(instance);
-		
+		//TextGenerator txtGen = new TextGenerator(instance);
+		XmlGenerator xmlGen = new XmlGenerator(instance);
 	}
 
 	private static void readConfig() {

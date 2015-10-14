@@ -1,5 +1,11 @@
 package model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
 public class Chassis {
 
 	private int chassis_id;
@@ -7,6 +13,12 @@ public class Chassis {
 	private boolean coupled;
 	private Customer customer;
 	private Vehicle vehicle;
+	
+	
+
+	public Chassis() {
+		super();
+	}
 
 	public Chassis(int chassis_id, int chassis_type, boolean coupled,
 			Customer customer) {

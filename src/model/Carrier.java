@@ -1,10 +1,20 @@
 package model;
 
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlAccessType;
+
+@XmlRootElement(name = "carrier")
+@XmlAccessorType (XmlAccessType.FIELD)
 public class Carrier {
 	
 	private int carrierId;
 	private String name;
 	
+	public Carrier() {
+		super();
+	}
+
 	public Carrier(int carrierId, String name) {
 		super();
 		this.carrierId = carrierId;

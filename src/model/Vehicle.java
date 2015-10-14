@@ -1,5 +1,11 @@
 package model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "vehicle")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Vehicle {
 
 	private int vehicleId;
@@ -9,7 +15,12 @@ public class Vehicle {
 	private Chassis chassis;
 	private boolean busy;
 
-	public Vehicle(int vehicleId, Location location, boolean chassisOn, boolean busy) {
+	public Vehicle() {
+		super();
+	}
+
+	public Vehicle(int vehicleId, Location location, boolean chassisOn,
+			boolean busy) {
 		super();
 		this.vehicleId = vehicleId;
 		this.location = location;
@@ -68,10 +79,10 @@ public class Vehicle {
 
 	@Override
 	public String toString() {
-		return "Vehicle [vehicleId=" + vehicleId + ", carrier=" + carrier.getCarrierId()
-				+ ", location=" + location + ", chassisOn=" + chassisOn
-				+ ", chassis=" + chassis + ", busy=" + busy + "]";
+		return "Vehicle [vehicleId=" + vehicleId + ", carrier="
+				+ carrier.getCarrierId() + ", location=" + location
+				+ ", chassisOn=" + chassisOn + ", chassis=" + chassis
+				+ ", busy=" + busy + "]";
 	}
-	
-	
+
 }

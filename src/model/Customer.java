@@ -2,12 +2,25 @@ package model;
 
 import java.util.ArrayList;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlRootElement(name = "customer")
+@XmlAccessorType (XmlAccessType.FIELD)
 public class Customer {
 
 	private int customer_id;
 	private String name;
 	private boolean uncoupling;
 	private Location location;
+	
+	
+
+	public Customer() {
+		super();
+	}
 
 	public Customer(int customer_id, String name, boolean uncoupling,
 			Location location) {
