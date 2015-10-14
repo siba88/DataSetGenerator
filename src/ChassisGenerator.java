@@ -14,6 +14,8 @@ public class ChassisGenerator {
 		for(int i=1; i<= instance.getNrChassis(); i++){
 			for(int j=1; j<=instance.getNrVehicles(); j++){
 				Chassis c = new Chassis(i*j, i, false, instance.getCustomers().get(0));
+				instance.addChassis(c);
+				instance.addChassisTemp(c);
 			}
 		}
 	}

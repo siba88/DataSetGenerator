@@ -22,13 +22,15 @@ public class Instance {
 	private ArrayList<Customer> customers;
 	private ArrayList<Chassis> chassis;
 	private ArrayList<Order> orders;
-	private ArrayList<ChassisTemp> chassisTemp;
+	private ArrayList<Chassis> chassisTemp;
 
 	public Instance() {
 		carriers = new ArrayList<Carrier>();
 		vehicles = new ArrayList<Vehicle>();
 		customers = new ArrayList<Customer>();
 		orders = new ArrayList<Order>();
+		chassis = new ArrayList<Chassis>();
+		chassisTemp = new ArrayList<Chassis>();
 	}
 
 	public String getFileName() {
@@ -177,6 +179,18 @@ public class Instance {
 	
 	public void addOrder(Order o){
 		this.orders.add(o);
+	}
+	
+	public ArrayList<Chassis> getChassisTemp() {
+		return chassisTemp;
+	}
+
+	public void setChassisTemp(ArrayList<Chassis> chassis) {
+		this.chassis = chassis;
+	}
+
+	public void addChassisTemp(Chassis c) {
+		this.chassisTemp.add(c);
 	}
 
 }

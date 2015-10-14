@@ -8,7 +8,7 @@ public class CarrierGenerator {
 	private Instance instance;
 	
 	public CarrierGenerator(Instance instance){
-		this.nrCarriers=nrCarriers;
+		this.nrCarriers=instance.getNrCarriers();
 		this.instance=instance;
 	}
 	

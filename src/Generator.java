@@ -21,7 +21,12 @@ public class Generator {
 		carrierGen.loadCarriers();
 		CustomerGenerator customerGen = new CustomerGenerator(instance);
 		customerGen.loadCustomers();
-		
+		ChassisGenerator chassisGen = new ChassisGenerator(instance);
+		chassisGen.loadChassis();
+		VehicleGenerator vehicleGen = new VehicleGenerator(instance);
+		vehicleGen.loadVehicles();
+		OrderGenerator orderGen = new OrderGenerator(instance);
+		orderGen.loadOrders();
 		
 		
 	}

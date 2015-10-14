@@ -21,13 +21,9 @@ public class VehicleGenerator {
 	private void generateVehicles() {
 		for(int i=1; i<=instance.getNrVehicles(); i++){
 			Vehicle v = new Vehicle(i, instance.getCustomers().get(0).getLocation(),false, false);
-			assignCarrier(v);
+			v.setCarrier(instance.getCarriers().get(rand.nextInt(instance.getNrCarriers()-1)));
 			instance.addVehicle(v);
 		}
-	}
-	
-	private void assignCarrier(Vehicle v){
-		v.setCarrier(instance.getCarriers().get(rand.nextInt(instance.getNrCarriers()-1)));
 	}
 
 }
